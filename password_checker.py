@@ -59,10 +59,10 @@ def main():
     password = input("Enter a password to test: ")
 
     strength, feedback = check_password_strength(password)
-    print(f"\nPassword Strength: {strength}")
+    print(f"\nPassword Strength: {strength}\n")
     if feedback:
         for f in feedback:
-            print(f" {f}")
+            print(f"    - {f}")
 
     print("\nChecking against known breaches (Have I Been Pwned)...")
     count = check_pwned_api(password)
